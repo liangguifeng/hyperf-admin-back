@@ -219,12 +219,11 @@
         /* 顶部卡片统计 */
         $.post("/statistics/siteInfo", function (json) {
             $.alert.ajaxSuccess(json);
-            if (json.status == 200) {
+            if (json.status === 200) {
                 var jsonData = json.data;
 
                 function setValue(dom, value) {
-                    var $dom = dom;
-                    $dom.find("div.tile-stats .count").text(value);
+                    dom.find("div.tile-stats .count").text(value);
                 }
 
                 $(".statistics-tag, .statistics-type, .statistics-comment, .statistics-article").each(function () {
@@ -237,7 +236,7 @@
         /* 分类文章数统计 */
         $.post("/statistics/listType", function (json) {
             $.alert.ajaxSuccess(json);
-            if (json.status == 200) {
+            if (json.status === 200) {
                 var jsonData = json.data;
                 zhyd.createChart({
                     id: 'echart_type',
@@ -250,7 +249,7 @@
         /* 爬虫访问统计 */
         $.post("/statistics/listSpider", function (json) {
             $.alert.ajaxSuccess(json);
-            if (json.status == 200) {
+            if (json.status === 200) {
                 var jsonData = json.data || [{name: '暂无', value: 0}];
                 zhyd.createChart({
                     id: 'echart_spider',

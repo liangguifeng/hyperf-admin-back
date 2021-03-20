@@ -19,9 +19,9 @@ use Hyperf\Validation\Contract\ValidatorFactoryInterface;
 use Qbhy\HyperfAuth\AuthManager;
 
 /**
- * 登录接口控制器.
+ * 登录接口.
  *
- * Class LoginController
+ * Class LoginController.
  *
  * @Controller
  */
@@ -42,7 +42,7 @@ class LoginController extends AbstractController
     protected $validationFactory;
 
     /**
-     * 管理后台首页.
+     * 管理后台登录接口.
      *
      * @RequestMapping(path="/passport/signin", methods="post")
      *
@@ -81,25 +81,17 @@ class LoginController extends AbstractController
         return $this->failed('登录失败！', '400');
     }
 
-//    /**
-//     * @Auth("session")
-//     * @GetMapping(path="/logout")
-//     */
-//    public function logout()
-//    {
-//        $this->auth->guard('session')->logout();
-//        return 'logout ok';
-//    }
-//
-//    /**
-//     * 使用 Auth 注解可以保证该方法必须通过某个 guard 的授权，支持同时传多个 guard，不传参数使用默认 guard
-//     * @Auth("session")
-//     * @GetMapping(path="/user")
-//     * @return string
-//     */
-//    public function user()
-//    {
-//        $user = $this->auth->guard('session')->user();
-//        return 'hello '.$user->name;
-//    }
+    /**
+     * 管理后台退出登录.
+     *
+     * @RequestMapping(path="/passport/logout", methods="post")
+     *
+     * @return array
+     */
+    public function logout()
+    {
+        $this->auth->guard('admin')->logout();
+
+        return $this->success('/', '退出登录成功！');
+    }
 }

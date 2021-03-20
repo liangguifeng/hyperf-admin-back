@@ -14,7 +14,7 @@
                         @else
                             管理员
                         @endif
-                        <span class=" fa fa-angle-down"></span>
+                        <span class="fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li><a data-toggle="modal" title="修改密码" data-target="#updPasswordModal">修改密码</a></li>
@@ -27,32 +27,33 @@
                     </ul>
                 </li>
                 <li role="presentation" class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                       aria-expanded="false">
-                        <i class="fa fa-envelope-o"></i>
+                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <span class="badge bg-green noticeNum">100</span>
                     </a>
-{{--                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">--}}
-{{--                        <li>--}}
-{{--                            <a href="/comments">--}}
-{{--                                <span class="image"><img src="${item.avatar}" onerror="this.src='/images/user.png'"--}}
-{{--                                                         alt="user avatar"></span>--}}
-{{--                                <span>--}}
+                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                        <li>
+                            <a href="/comments">
+                                <span class="image">
+{{--                                    <img src="${item.avatar}" onerror="this.src='/images/user.png'"--}}
+{{--                                                         alt="user avatar">--}}
+                                </span>
+                                <span>
 {{--                                    <span>${item.nickname}</span>--}}
 {{--                                    <span class="time">${item.createTime?string('yyyy-MM-dd HH:mm:ss')}</span>--}}
-{{--                                </span>--}}
-{{--                                <span class="message">点击查看&审核</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li id="event-li">--}}
-{{--                            <div class="text-center">--}}
-{{--                                <a href="/comments">--}}
-{{--                                    <strong>立即处理</strong>--}}
-{{--                                    <i class="fa fa-angle-right"></i>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
+                                </span>
+                                <span class="message">点击查看&审核</span>
+                            </a>
+                        </li>
+                        <li id="event-li">
+                            <div class="text-center">
+                                <a href="/comments">
+                                    <strong>立即处理</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="{{$config['siteUrl']}}" target="_blank">

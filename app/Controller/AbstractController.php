@@ -8,7 +8,6 @@ declare(strict_types=1);
  * @document https://findcat.cn/about
  * @contact  1476982312@qq.com
  */
-
 namespace App\Controller;
 
 use Hyperf\Di\Annotation\Inject;
@@ -36,11 +35,10 @@ abstract class AbstractController
      */
     protected $response;
 
-
     /**
      * 请求成功
      *
-     * @param        $data
+     * @param $data
      * @param string $message
      *
      * @return array
@@ -56,7 +54,8 @@ abstract class AbstractController
      * 请求失败.
      *
      * @param string $message
-     * @param        $code
+     * @param $code
+     * @param mixed $status
      *
      * @return array
      */

@@ -14,7 +14,6 @@ use App\Middleware\Auth\AdminLoginMiddleware;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\Middleware;
 use Hyperf\HttpServer\Annotation\RequestMapping;
-use function Hyperf\ViewEngine\view;
 
 /**
  * 登录页面控制器.
@@ -36,16 +35,6 @@ class IndexController extends AdminAuthController
      */
     public function index()
     {
-        $data = [
-            'user' => $this->auth->guard('admin')->user(),
-            'config' => [
-                'siteName' => '犯二青年博客',
-                'siteUrl' => 'https://findcat.cn',
-            ],
-            'message' => '',
-            'enableCaptcha' => false,
-        ];
-
-        return view('admin.index', $data);
+        return $this->view('admin.index');
     }
 }

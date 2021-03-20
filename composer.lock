@@ -8080,7 +8080,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/qiutuleng/hyperf-dump-server",
-                "reference": "9530f8b2b27b20a65d1d31065432af48db5df1dd"
+                "reference": "6057ad129361b9e51d3aef0aabef54fa0586a331"
             },
             "require": {
                 "ext-swoole": ">=4.5",
