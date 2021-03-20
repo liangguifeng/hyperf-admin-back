@@ -36,14 +36,16 @@ class IndexController extends AdminAuthController
      */
     public function index()
     {
-        dump($this->auth->guard('admin')->user());
         $data = [
+            'user' => $this->auth->guard('admin')->user(),
             'config' => [
                 'siteName' => '犯二青年博客',
+                'siteUrl' => 'https://findcat.cn',
             ],
             'message' => '',
             'enableCaptcha' => false,
         ];
+
         return view('admin.index', $data);
     }
 }

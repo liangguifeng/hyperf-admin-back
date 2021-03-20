@@ -3,8 +3,6 @@
  * Author:liangguifeng
  */
 
-@CHARSET "UTF-8";
-
 .x_title h2, table.tile_info td p {
     white-space: nowrap;
     text-overflow: ellipsis
@@ -5183,4 +5181,69 @@ ul, menu, dir {
 
 .pointer {
     cursor: pointer;
+}
+.notice-box ul {
+    -webkit-padding-start: 40px!important;
+}
+.statistics-panel {
+    color: #73879C;
+}
+.statistics-box {
+    z-index: 1;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+.statistics-box:hover {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    box-shadow: -10px 10px 30px -15px #9e9c9c;
+    -webkit-box-shadow: -10px 10px 30px -15px #9e9c9c;
+    -moz-box-shadow: -10px 10px 30px -15px #9e9c9c;
+    transition: all .3s ease;
+}
+.statistics-box .icon i {
+    margin: 0;
+    font-size: 45px;
+    line-height: 0;
+    vertical-align: bottom;
+    padding: 0;
+}
+
+.panel_toolbox {
+    min-width: auto;
+}
+
+#statistics-article-list li.title {
+    padding: 2px;
+    width: 85%;
+    float: left
+}
+
+.recentArticles th.title div{
+    width: 200px;
+}
+
+.recentComments .content{
+    width: 150px;
+}
+
+.recentComments .source div{
+    width: 80px;
+}
+.word-prase {
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#statistics-article-list li.count {
+    padding: 2px;
+    width: 15%;
+    float: left;
+    text-align: right;
+}
+.notice-box li{
+    line-height: 25px;
 }
